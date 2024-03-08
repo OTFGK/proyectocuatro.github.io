@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studiare: Una Comunidad que Crece Junta</title>
+    <link rel="icon" type="image/png" href="image/Logo_cuadrado.png">
+    <!--swiper css link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!--bootstrap css link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--custom css file link-->
+    <link rel="stylesheet" href="style.css">
+    <!--Link toastify css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css">
+    <!--Link bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <!--Navbar Star-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#Inicio">
+        <img src="image/Logo_horizontal.png" alt="Studiare" width="150" height="26">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <a href="#Inicio" class="navbar-nav-enlaces">Inicio</a>
+          <a href="#Materias" class="navbar-nav-enlaces">Materias</a>
+          <a href="#Comunidades" class="navbar-nav-enlaces">Comunidades</a>
+          <a href="#Profesores" class="navbar-nav-enlaces">Profesores</a>
+          <a href="#¿Qué-ofrecemos?" class="navbar-nav-enlaces">¿Qué ofrecemos?</a>
+        </ul>
+      <a id="botonIniciarSesion" class="nav-link sesionCerrada btn-iniciar-sesión" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#modalIniciarSesion">Iniciar Sesión</a>
+      <a id="botonRegistrarse" class="nav-link sesionCerrada btn-registrarse" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#modalCrearCuenta">Registrarse</a>
+      <a id="botonCerrarSesion" class="nav-link sesionIniciada btn-cerrar-sesión bi bi-box-arrow-right" aria-current="page" href="#"> Cerrar Sesión</a>
+      </div>
+    </div>
+  </nav>
+  <!--Navbar End-->
+
+
+
+
+  
+  <!--Modales Registrarse/Iniciar sesión STAR-->
+  <div class="modal" tabindex="-1" id="modalCrearCuenta">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Registrarse</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formCrearCuenta">
+            <div class="mb-3">
+              <label for="correoCrearCuenta" class="form-label bi bi-envelope"> Correo</label>
+              <input type="email" class="form-control" id="correoCrearCuenta" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+              <label for="contraCrearCuenta" class="form-label bi bi-shield-lock"> Contraseña</label>
+              <input type="password" class="form-control" id="contraCrearCuenta">
+            </div>
+
+            <!--<div class="mb-3">
+              <label for="nombresCrearCuenta" class="form-label">Nombres</label>
+              <input type="text" class="form-control" id="nombresCrearCuenta">
+            </div>
+
+            <div class="mb-3">
+              <label for="apellidosCrearCuenta" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="apellidosCrearCuenta">
+            </div>
+
+            <div class="mb-3">
+              <label for="edadCrearCuenta" class="form-label">Edad</label>
+              <input type="number" class="form-control" id="edadCrearCuenta">
+            </div>-->
+            
+            <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-outline-warning">Registrarse</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" id="modalIniciarSesion">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Iniciar Sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formIniciarSesion">
+            <div class="mb-3">
+              <label for="correoIniciarSesion" class="form-label bi bi-envelope"> Correo</label>
+              <input type="email" class="form-control" id="correoIniciarSesion" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+              <label for="contraIniciarSesion" class="form-label bi bi-shield-lock"> Contraseña</label>
+              <input type="password" class="form-control" id="contraIniciarSesion">
+            </div>
+            
+            <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-outline-warning">Aceptar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Modales Registrarse/Iniciar sesión END-->
+
+
+
+
+
+
+  <!--Inicio Section Star-->
+  <section class="home" id="Inicio">
+    <div class="mb-3" style="max-width: 100%;">
+      <div class="row g-0 text-center">
+        <div class="col-md-7 card-body-contenido">
+          <div class="card-body content" id="mensajeBienvenida">
+            <h3 class="card-title"><span class="letra-s">S</span><span class="letra-t">t</span><span class="letra-u">u</span><span class="letra-d">d</span><span class="letra-i">i</span><span class="letra-a">a</span><span class="letra-r">r</span><span class="letra-e">e</span></h3>
+            <p class="card-text">Donde la educación es una experiencia compartida, una comunidad que crece junta.</p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <img src="image/chat-web.png" alt="chat-web">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Inicio Section End-->
+
+
+
+
+
+
+  <!--Mostrador Section Star-->
+  <section class="count">
+    <div class="container text-center mb-3">
+      <div class="row justify-content-center g-4">
+        
+        <div class="col-12 col-md-6 col-lg-2 box">
+          <div class="p-3">
+            <div class="content">
+              <h3>+10.000</h3>
+              <p>estudiantes</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-2 box">
+          <div class="p-3">
+            <div class="content">
+              <h3>+100</h3>
+              <p>comunidades</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-2 box">
+          <div class="p-3">
+            <div class="content">
+              <h3>+1000</h3>
+              <p>profesores</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-2 box">
+          <div class="p-3">
+            <div class="content">
+              <h3>+50</h3>
+              <p>materias</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-2 box">
+          <div class="p-3">
+            <div class="content">
+              <h3>+500.000</h3>
+              <p>recursos</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--Mostrador Section End-->
+
+
+
+
+
+
+  <!--Materias Section Star-->
+  <section class="courses" id="Materias">
+
+    <h1 class="heading">Materias</h1>
+    <div class="swiper course-slider">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide slide">
+          <img src="image/matemática.png" alt="matemática">
+          <h3>Matemática</h3>
+          <p>
+            Explora el mundo de los números y las estructuras matemáticas, desafía tu mente con problemas intrigante.
+          </p>
+          <a href="#" class="btn btn-explorar" data-bs-toggle="modal" data-bs-target="#exampleModalMath">Explorar</a>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="image/física.png" alt="física">
+          <h3>Física</h3>
+          <p>
+            Sumérgete en la ciencia que explora el comportamiento fundamental del universo. Desde las leyes del movimiento hasta la energía.
+          </p>
+          <a href="#" class="btn btn-explorar" data-bs-toggle="modal" data-bs-target="#exampleModalFis">Explorar</a>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="image/química.png" alt="química">
+          <h3>Química</h3>
+          <p>
+            Descubre la magia de las sustancias y las reacciones químicas. Explora la composición de la materia y cómo interactúan diferentes elementos.
+          </p>
+          <a href="#" class="btn btn-explorar" data-bs-toggle="modal" data-bs-target="#exampleModalQuim">Explorar</a>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="image/geografía.png" alt="geografía">
+          <h3>Geografía</h3>
+          <p>
+            Viaja por el mundo y explora la diversidad de la Tierra. Descubre paisajes asombrosos, culturas fascinantes y la interconexión global.
+          </p>
+          <a href="#" class="btn btn-explorar" data-bs-toggle="modal" data-bs-target="#exampleModalGeo">Explorar</a>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="image/historia.png" alt="historia">
+          <h3>Historia</h3>
+          <p>
+            Adéntrate en el pasado y explora civilizaciones, sociedades y momentos clave de la humanidad.
+          </p>
+          <a href="#" class="btn btn-explorar" data-bs-toggle="modal" data-bs-target="#exampleModalHist">Explorar</a>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="image/literatura.png" alt="literatura">
+          <h3>Literatura</h3>
+          <p>
+            Embárcate en viajes literarios, descubre mundos imaginarios y emociones profundas. Explora la expresión creativa a través de las palabras.
+          </p>
+          <a href="#" class="btn btn-explorar" data-bs-toggle="modal" data-bs-target="#exampleModalLit">Explorar</a>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="image/psicología.png" alt="psicología">
+          <h3>Psicología</h3>
+          <p>
+            Explora la mente humana, comprende comportamientos y emociones. Descubre los misterios de la psicología y cómo impacta nuestra vida diaria.
+          </p>
+          <a href="#" class="btn btn-explorar" data-bs-toggle="modal" data-bs-target="#exampleModalPsico">Explorar</a>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="image/arte.png" alt="arte">
+          <h3>Arte</h3>
+          <p>
+            Sumérgete en la expresión creativa a través de diferentes formas artísticas. Descubre la belleza y la diversidad del arte visual y auditivo.
+          </p>
+          <a href="#" class="btn btn-explorar" data-bs-toggle="modal" data-bs-target="#exampleModalArte">Explorar</a>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </section>
+  <!--Materias Section End-->
+
+
+
+  
+
+  <!--   MODALES   -->
+  <!-- Modal Matemáticas -->
+  <div class="modal fade mimodal"  id="exampleModalMath" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Matemáticas</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <p>Escribir algo referente a la materia</p>
+          <!-- CRUD -->
+          <!-- ADD TASK -->
+          <div class="container p-4" style="max-height: 600px;">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <div class="card">
+                  <div class="card-body">
+                    <h1 class="h4">Agregar tarea o nota</h1>
+                    <form id="form-tareas-matematicas">
+                      <label for="title">Titulo:</label>
+                      <input
+                        type="text"
+                        id="titulo-tarea"
+                        class="form-control mb-3"
+                        class="My First Title"
+                        placeholder="Titulo de tarea"
+                        autofocus>
+                      <label for="description">Descripción:</label>
+                      <textarea
+                        id="descripcion-tarea"
+                        rows="3"
+                        class="form-control mb-3"
+                        placeholder="Escribir tarea o nota aquí">
+                      </textarea>
+            
+                      <button type="submit" class="btn btn-primary bi bi-arrow-bar-up" id="btn-task-form"> Guardar</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="container p-4">
+            <div class="row">
+              <div class="col-md-6">
+                <h2 class="text-black">Publicaciones</h2>
+                <ul class="list-group" id="contenedor-tareas-mias-math">
+                </ul>
+              </div>
+              
+              <div class="col-md-6 ">
+                <h2 class="text-black">Otros usuarios</h2>
+                <ul class="list-group" id="contenedor-tareas-todas-math">
+                </ul>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal Física -->
+  <div class="modal fade mimodal"  id="exampleModalFis" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Física</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Escribir algo referente a la materia</p>
+          <!-- CRUD -->
+          <!-- ADD TASK -->
+          <div class="container p-4" style="max-height: 600px;">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <div class="card">
+                  <div class="card-body">
+                    <h1 class="h4">Agregar tarea o nota</h1>
+                    <form id="form-tareas-fisica">
+                      <label for="title">Titulo:</label>
+                      <input
+                        type="text"
+                        id="titulo-tarea"
+                        class="form-control mb-3"
+                        class="My First Title"
+                        placeholder="Titulo de tarea"
+                        autofocus>
+                      <label for="description">Descripción:</label>
+                      <textarea
+                        id="descripcion-tarea"
+                        rows="3"
+                        class="form-control mb-3"
+                        placeholder="Escribir tarea o nota aquí">
+                      </textarea>
+                      <button type="submit" class="btn btn-primary bi bi-arrow-bar-up" id="btn-task-form"> Guardar</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="container p-4">
+            <div class="row">
+              <div class="col-md-6">
+                <h2 class="text-black">Publicaciones</h2>
+                <ul class="list-group" id="contenedor-tareas-fisica">
+                </ul>
+              </div>
+  
+              <div class="col-md-6 ">
+                <h2 class="text-black">Otros usuarios</h2>
+                <ul class="list-group" id="contenedor-tareas-todas-math">
+                </ul>
+              </div>
+  
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!--Comunidades Star
+  <section class="comunidad" id="Comunidades">
+
+    <h2 class="heading">Comunidades</h2>
+    <div class="comunidad-contenido">
+
+      <div class="grupos-comunidades">
+        <span>
+          <img src="image/1-img-comunidades.jpg" alt="Escritores Emergentes" class="img-comunidades">
+          <h5>Escritores Emergentes</h5>
+        </span>
+        <div>
+          <p>Únete para compartir tus creaciones literarias, recibir retroalimentación constructiva y explorar técnicas de escritura. Este grupo es ideal para aquellos apasionados por la palabra escrita y que buscan mejorar sus habilidades narrativas.</p>
+          <a href="" class="participar-link">Participar
+            <span class="icon-participar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+          </span>
+          </a>
+        </div>
+      </div>
+  
+      <div class="grupos-comunidades">
+        <span>
+          <img src="image/2-img-comunidades.jpg" alt="Matemáticas Colaborativas" class="img-comunidades">
+          <h5>Matemáticas Colaborativas</h5>
+        </span>
+        <div>
+          <p>Únete a nuestro grupo para colaborar en la resolución de problemas matemáticos. Comparte tus desafíos, ofrece ayuda a otros estudiantes y descubre enfoques creativos para resolver ecuaciones y problemas complejos.</p>
+          <a href="" class="participar-link">Participar
+            <span class="icon-participar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+          </span>
+          </a>
+        </div>
+      </div>
+  
+      <div class="grupos-comunidades">
+        <span>
+          <img src="image/3-img-comunidades.jpg" alt="Resolviendo Desafíos de Física" class="img-comunidades">
+          <h5>Desafíos de Física</h5>
+        </span>
+        <div>
+          <p>Explora el fascinante mundo de la física en nuestro grupo. Colabora en la resolución de problemas, comparte enfoques efectivos y mejora tu comprensión de los conceptos fundamentales.</p>
+          <a href="" class="participar-link">Participar
+            <span class="icon-participar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+          </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="btn-crear-comunidad-div">
+      <button href="#" type="button" class="bi bi-calendar-plus btn-crear-comunidad" data-bs-toggle="modal" data-bs-target="#modalCrearComunidad"> Crea tu propia comunidad</button>
+    </div>
+  </section>
+  Comunidades End-->
+
+  <section class="comunidad" id="Comunidades">
+    <h2 class="heading">Comunidades</h2>
+    <div class="container mb-3">
+      <div class="row gx-5 justify-content-center">
+        <div class="col-12 col-md-3 col-lg-4 box-comunidad">
+         <div class="p-3 grupos-comunidades">
+            <span>
+              <img src="image/1-img-comunidades.jpg" alt="Escritores Emergentes" class="img-comunidades">
+              <h5>Escritores Emergentes</h5>
+            </span>
+            <div>
+              <p>Únete para compartir tus creaciones literarias, recibir retroalimentación constructiva y explorar técnicas de escritura. Este grupo es ideal para aquellos apasionados por la palabra escrita y que buscan mejorar sus habilidades narrativas.</p>
+              <a href="" class="participar-link">Participar
+                <span class="icon-participar">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 col-lg-4 box-comunidad">
+          <div class="p-3 grupos-comunidades">
+            <span>
+              <img src="image/2-img-comunidades.jpg" alt="Matemáticas Colaborativas" class="img-comunidades">
+              <h5>Matemáticas Colaborativas</h5>
+            </span>
+            <div>
+              <p>Únete a nuestro grupo para colaborar en la resolución de problemas matemáticos. Comparte tus desafíos, ofrece ayuda a otros estudiantes y descubre enfoques creativos para resolver ecuaciones y problemas complejos.</p>
+              <a href="" class="participar-link">Participar
+                <span class="icon-participar">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                </svg>
+              </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 col-lg-4 box-comunidad">
+          <div class="p-3 grupos-comunidades">
+            <span>
+              <img src="image/3-img-comunidades.jpg" alt="Resolviendo Desafíos de Física" class="img-comunidades">
+              <h5>Desafíos de Física</h5>
+            </span>
+            <div>
+              <p>Explora el fascinante mundo de la física en nuestro grupo. Colabora en la resolución de problemas, comparte enfoques efectivos y mejora tu comprensión de los conceptos fundamentales.</p>
+              <a href="" class="participar-link">Participar
+                <span class="icon-participar">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                </svg>
+              </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-crear-comunidad-div">
+      <button href="#" type="button" class="bi bi-calendar-plus btn-crear-comunidad" data-bs-toggle="modal" data-bs-target="#modalCrearComunidad"> Crea tu propia comunidad</button>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!--MODAL Crear Comunidad Star-->
+  <div class="modal" id="modalCrearComunidad" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Crear Comunidad</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formCrearComunidad">
+            <div class="mb-3">
+              <label for="nombreCrearComunidad" class="form-label bi bi-people"> Nombre de la comunidad</label>
+              <input type="text" class="form-control" id="nombreCrearComunidad">
+            </div>
+
+            <div class="mb-3">
+              <label for="descripcionCrearComunidad" class="form-label bi bi-text-left"> Descripción de la comunidad</label>
+              <textarea name="descripción" class="form-control" id="descripcionCrearComunidad" cols="30" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="materiaCrearComunidad" class="form-label bi bi-book"> Materia</label>
+              <select name="materia" class="form-control" id="materiaCrearComunidad">
+                <option value="1">Matemática</option>
+                <option value="2">Física</option>
+                <option value="3">Química</option>
+                <option value="4">Geografía</option>
+                <option value="5">Historia</option>
+                <option value="6">Literatura</option>
+                <option value="7">Psicología</option>
+                <option value="8">Arte</option>
+                <option value="9">Otro</option>
+              </select>
+              <label for="hashtagCrearComunidad" class="form-label bi bi-book"> Hashtag</label>
+            </div>
+
+            <div class="mb-3">
+              <label for="invitarCrearComunidad" class="form-label bi bi-person-add"> Invitar amigos</label>
+              <input type="email" class="form-control" id="invitarCrearComunidad">
+            </div>
+
+            <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-outline-warning">Crear</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--MODAL Crear Comunidad End-->
+
+
+
+
+
+
+  <!--¿Qué Ofrecemos? Star-->
+  <section class="qué-ofrecemos" id="¿Qué-ofrecemos?">
+    <h2 class="heading">Descubre lo que ofrece Studiare</h2>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h3 class="bi bi-patch-question-fill"> Preguntas</h3>
+          <p>Realiza preguntas, obtén respuestas y colabora con otros estudiantes para resolver dudas académicas.</p>
+        </div>
+        <div class="carousel-item">
+          <h3 class="bi bi-collection-fill"> Biblioteca</h3>
+          <p>Accede a una amplia variedad de recursos educativos, libros y materiales para enriquecer tu aprendizaje.</p>
+        </div>
+        <div class="carousel-item">
+          <h3 class="bi bi-hash"> Hashtag</h3>
+          <p>Explora y participa en conversaciones utilizando hashtags relacionados con tus intereses académicos.</p>
+        </div>
+        <div class="carousel-item">
+          <h3 class="bi bi-people-fill"> Comunidades</h3>
+          <p>Únete a comunidades de estudiantes con intereses similares, comparte recursos y colabora en proyectos educativos.</p>
+        </div>
+        <div class="carousel-item">
+          <h3 class="bi bi-calendar-event-fill"> Eventos</h3>
+          <p>Descubre eventos educativos, conferencias y actividades relacionadas con tus áreas de estudio.</p>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <!--¿Qué Ofrecemos? End-->
+
+
+
+
+
+
+  <!--Footer Star-->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a href="#Inicio" class="bi bi-house-fill enlaces-p"> Inicio</a></li>
+            <li><a href="#Materias" class="bi bi-book-half enlaces-p"> Materias</a></li>
+            <li><a href="#Comunidades" class="bi bi-chat-left-text-fill enlaces-p"> Comunidades</a></li>
+            <li><a href="#Profesores" class="bi bi-person-workspace enlaces-p"> Profesores</a></li>
+            <li><a href="#¿Qué-ofrecemos?" class="bi bi-lightbulb-fill enlaces-p"> ¿Qué ofrecemos?</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3> Contacto</h3>
+          <p class="bi bi-envelope-at-fill studiare-email-p"> studiare@email.com</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Redes Sociales</h3>
+          <ul>
+            <li><a href="#" target="_blank" class="bi bi-instagram"> Instagram</a></li>
+            <li><a href="#" target="_blank" class="bi bi-twitter-x"> Twitter</a></li>
+            <li><a href="#" target="_blank" class="bi bi-facebook"> Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--Footer End-->
+
+
+
+
+
+
+
+  <!--JS LINKS-->
+
+    <!--jquery js link-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!--bootstrap js link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--Link toastify js-->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.js"></script>
+    <!--swiper js link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--custom js file link-->
+    <script src="script.js"></script>
+    <!--main js link-->
+    <script src="main.js" type="module"></script>
+</body>
+</html>
